@@ -36,6 +36,8 @@ include_directories(
 # add_dependencies(XXXX)
 
 add_executable(${PROJECT_NAME}
+  src/sdl_stuff.c
+  src/wumpus.c
   src/main.c
 )
 
