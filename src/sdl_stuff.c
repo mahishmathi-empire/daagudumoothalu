@@ -27,3 +27,14 @@ void present_screen(SDL_Renderer* renderer)
 {
   SDL_RenderPresent(renderer);
 }
+
+int load_texture(SDL_Renderer* renderer, const char* filename, SDL_Texture** texture)
+{
+  *texture = IMG_LoadTexture(renderer, filename);
+  if (*texture == NULL)
+  {
+    fprintf(stderr, "Error creating texture: %s\n", SDL_GetError());
+    return 2;
+  }
+  return 0;
+}

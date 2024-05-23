@@ -47,6 +47,7 @@ endif()
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
   SDL2::SDL2
+  SDL2_image
 )
 
 # install
