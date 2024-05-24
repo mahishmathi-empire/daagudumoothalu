@@ -39,13 +39,13 @@
 2. Clone the repository.
   
     ```bash
-    [~/me_ws/src] $ git clone https://github.com/mahishmathi-empire/daagudumoothalu.git
+    git clone https://github.com/mahishmathi-empire/daagudumoothalu.git
     ```
 
 3. Build the package.
   
     ```bash
-    [~/me_ws/src] $ ./daagudumoothalu/build.sh -p daagudumoothalu -c -i -- -DCMAKE_BUILD_TYPE=Debug -DENABLE_TESTS=OFF
+    ./daagudumoothalu/build.sh -p daagudumoothalu -c -i -- -DCMAKE_BUILD_TYPE=Debug -DENABLE_TESTS=OFF
     ```
 
     - `-p` specifies the package name.
@@ -58,7 +58,7 @@
 4. Build the tests.
   
     ```bash
-    [~/me_ws/src] $ ./daagudumoothalu/build.sh -p daagudumoothalu -c -i -- -DCMAKE_BUILD_TYPE=Debug -DENABLE_TESTS=ON
+    ./daagudumoothalu/build.sh -p daagudumoothalu -c -i -- -DCMAKE_BUILD_TYPE=Debug -DENABLE_TESTS=ON
     ```
 
 ## Test
@@ -72,7 +72,7 @@
 2. Run the executable.
   
     ```bash
-    [~/me_ws/src] $ ./test
+    ./test
     ```
 
 ## TODO
