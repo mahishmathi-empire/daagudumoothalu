@@ -31,21 +31,27 @@
 1. Create a workspace directory and change to it.
   
     ```bash
-    mkdir -p ~/me_ws/src/ ~/me_ws/build/ ~/me_ws/install/
+    mkdir -p ~/me_ws/
 
-    cd ~/me_ws/src/
+    cd ~/me_ws/
     ```
 
 2. Clone the repository.
   
     ```bash
-    [~/me_ws/src] $ git clone https://github.com/mahishmathi-empire/daagudumoothalu.git
+    git clone https://github.com/mahishmathi-empire/daagudumoothalu.git
     ```
 
-3. Build the package.
+3. Switch from main branch to setup.
   
     ```bash
-    [~/me_ws/src] $ ./daagudumoothalu/build.sh -p daagudumoothalu -c -i -- -DCMAKE_BUILD_TYPE=Debug -DENABLE_TESTS=OFF
+    git checkout setup
+    ```
+
+4. Build the package.
+  
+    ```bash
+    ./daagudumoothalu/build.sh -p daagudumoothalu -c -i -- -DCMAKE_BUILD_TYPE=Debug -DENABLE_TESTS=OFF
     ```
 
     - `-p` specifies the package name.
@@ -55,24 +61,26 @@
     -  `-DCMAKE_BUILD_TYPE=Debug` specifies the build type.
     -  `-DENABLE_TESTS=ON` enables the tests.
 
-4. Build the tests.
+5. Build the tests.
   
     ```bash
-    [~/me_ws/src] $ ./daagudumoothalu/build.sh -p daagudumoothalu -c -i -- -DCMAKE_BUILD_TYPE=Debug -DENABLE_TESTS=ON
+    ./daagudumoothalu/build.sh -p daagudumoothalu -c -i -- -DCMAKE_BUILD_TYPE=Debug -DENABLE_TESTS=ON
     ```
 
 ## Test
 
-1. Change to bin directory.
+1. Create install/bin/ directories and change to bin.
   
     ```bash
+    mkdir -p ~/me_ws/install/bin/
+
     cd ~/me_ws/install/bin/
     ```
 
 2. Run the executable.
   
     ```bash
-    [~/me_ws/src] $ ./test
+    ./test
     ```
 
 ## TODO
